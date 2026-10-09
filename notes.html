@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Notes | Code With MT</title>
+  <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">CODE<span>WITH MT</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a class="active" href="notes.html">Notes</a>
+      <a href="coding.html">Coding</a>
+      <a href="projects.html">AI & Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container page-main">
+    <section class="page-heading reveal">
+      <span class="eyebrow">YOUR DIGITAL NOTEBOOK</span>
+      <h1>Study <span class="gradient">Notes.</span></h1>
+      <p>Find your next topic and organise your learning.</p>
+      <input class="search-box" data-search="notes-list"
+        type="search" placeholder="Search Python, AI, Maths..."
+        aria-label="Search study notes">
+    </section>
+
+    <div class="filter-row" data-filters="notes-list">
+      <button class="filter-btn selected" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="programming">Programming</button>
+      <button class="filter-btn" data-filter="ai">AI & DS</button>
+      <button class="filter-btn" data-filter="maths">Mathematics</button>
+    </div>
+
+    <section class="grid" id="notes-list">
+      <article class="feature-card searchable reveal" data-category="programming">
+        <span class="card-icon">🐍</span>
+        <span class="tag">PROGRAMMING</span>
+        <h3>Python Fundamentals</h3>
+        <p>Variables, data types, conditions, loops and functions.</p>
+        <a class="card-link" href="coding.html#python">Learn Python ↗</a>
+      </article>
+      <article class="feature-card searchable reveal" data-category="programming">
+        <span class="card-icon">⚙️</span>
+        <span class="tag">PROGRAMMING</span>
+        <h3>C Programming</h3>
+        <p>Operators, arrays, loops, functions and pointers.</p>
+        <a class="card-link" href="coding.html#c-language">Learn C ↗</a>
+      </article>
+      <article class="feature-card searchable reveal" data-category="ai">
+        <span class="card-icon">🧠</span>
+        <span class="tag">ARTIFICIAL INTELLIGENCE</span>
+        <h3>Introduction to AI</h3>
+        <p>Understand AI, its applications and basic terminology.</p>
+        <a class="card-link" href="projects.html#ai-basics">Explore AI ↗</a>
+      </article>
+      <article class="feature-card searchable reveal" data-category="ai">
+        <span class="card-icon">📊</span>
+        <span class="tag">DATA SCIENCE</span>
+        <h3>Data Science Basics</h3>
+        <p>Learn about data collection, analysis and visualisation.</p>
+        <a class="card-link" href="projects.html#data-science">Explore DS ↗</a>
+      </article>
+      <article class="feature-card searchable reveal" data-category="maths">
+        <span class="card-icon">📐</span>
+        <span class="tag">MATHEMATICS</span>
+        <h3>Linear Algebra</h3>
+        <p>Start with vectors, matrices and their applications.</p>
+        <a class="card-link" href="projects.html#ml-roadmap">See ML roadmap ↗</a>
+      </article>
+      <article class="feature-card searchable reveal" data-category="maths">
+        <span class="card-icon">∑</span>
+        <span class="tag">MATHEMATICS</span>
+        <h3>Probability & Statistics</h3>
+        <p>Explore probability, averages, distributions and data.</p>
+        <a class="card-link" href="projects.html#data-science">Explore DS ↗</a>
+      </article>
+    </section>
+
+    <p class="empty-state" id="emptyState" hidden>No matching topics found. Try another search.</p>
+    <p class="note">Note: These are learning-topic cards, not downloadable PDF notes yet.</p>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="index.html">CODE<span>WITH MT</span></a>
+    <p>Learn something new every day.</p>
+    <p>© <span class="year"></span> Code With MT</p>
+  </footer>
+</body>
+</html>

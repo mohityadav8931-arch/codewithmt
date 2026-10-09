@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code With MT | AI & DS Hub</title>
+  <link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">CODE<span>WITH MT</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a class="active" href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="coding.html">Coding</a>
+      <a href="projects.html">AI & Projects</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PERSONAL STUDENT DASHBOARD -->
+<section class="container dashboard-section" id="dashboard">
+  <div class="dashboard-welcome">
+    <div>
+      <span class="eyebrow">YOUR PERSONAL WORKSPACE</span>
+      <h2>Welcome back, <span class="gradient">Developer!</span></h2>
+      <p>Learn a little today. Build something great tomorrow.</p>
+    </div>
+    <div class="clock-card">
+      <span>LOCAL TIME</span>
+      <strong id="liveClock">--:--:--</strong>
+      <small id="liveDate">Loading date...</small>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <article class="dash-card">
+      <span class="card-icon">🎯</span>
+      <h3>Today's Study Goal</h3>
+      <p>Choose how many minutes you want to study today.</p>
+      <div class="goal-controls">
+        <select id="goalSelect" aria-label="Daily study goal">
+          <option value="30">30 minutes</option>
+          <option value="60" selected>60 minutes</option>
+          <option value="90">90 minutes</option>
+          <option value="120">120 minutes</option>
+        </select>
+        <button class="btn primary" id="saveGoal">Set Goal</button>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="goalProgress"></div>
+      </div>
+      <p id="goalText" aria-live="polite">0 of 60 minutes completed</p>
+      <div class="goal-controls">
+        <button class="btn secondary" id="addStudy">+15 min studied</button>
+        <button class="btn secondary" id="resetStudy">Reset</button>
+      </div>
+    </article>
+
+    <article class="dash-card">
+      <span class="card-icon">⚡</span>
+      <h3>Quick Links</h3>
+      <p>Jump straight to your learning resources.</p>
+      <div class="quick-links">
+        <a href="notes.html">📚 Study Notes <span>↗</span></a>
+        <a href="coding.html">💻 Coding Practice <span>↗</span></a>
+        <a href="projects.html">🤖 AI Projects <span>↗</span></a>
+        <a href="about.html">👨‍💻 About Me <span>↗</span></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- PERSONAL STUDY PLANNER -->
+<section class="container section" id="planner">
+  <div class="section-heading">
+    <span class="eyebrow">PLAN • PRACTISE • PROGRESS</span>
+    <h2>My Study <span class="gradient">Planner.</span></h2>
+    <p>Add your own tasks and tick them off when completed.</p>
+  </div>
+
+  <div class="planner-card">
+    <form id="taskForm" class="task-form">
+      <label class="sr-only" for="taskInput">New study task</label>
+      <input id="taskInput" maxlength="120" required
+        placeholder="e.g. Practise 5 Python questions">
+      <button class="btn primary" type="submit">+ Add Task</button>
+    </form>
+    <div class="task-summary">
+      <span id="taskCount">0 tasks</span>
+      <button class="text-button" id="clearCompleted" type="button">
+        Clear completed
+      </button>
+    </div>
+    <ul id="taskList" class="task-list"></ul>
+    <p id="taskEmpty" class="empty-state">Your planner is empty. Add your first task!</p>
+  </div>
+</section>
+
+<!-- QUICK KNOWLEDGE QUIZ -->
+<section class="container section" id="quiz">
+  <div class="section-heading">
+    <span class="eyebrow">TEST YOUR KNOWLEDGE</span>
+    <h2>Mini <span class="gradient">Coding Quiz.</span></h2>
+    <p>Answer the questions and see your score instantly.</p>
+  </div>
+  <div id="quizApp" class="quiz-card"></div>
+</section>
+    <section class="hero container">
+      <div class="hero-content reveal">
+        <span class="eyebrow">WELCOME TO YOUR LEARNING HUB</span>
+        <h1>Learn. Code.<br><span class="gradient">Build the Future.</span></h1>
+        <p>Your personal learning space for B.Tech Artificial Intelligence & Data Science. Learn programming, explore AI and build real projects.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="notes.html">Explore Notes ↗</a>
+          <a class="btn secondary" href="projects.html">Explore Projects</a>
+        </div>
+        <div class="stats">
+          <div><strong>01</strong><span>Learn Basics</span></div>
+          <div><strong>02</strong><span>Practice Coding</span></div>
+          <div><strong>03</strong><span>Build Projects</span></div>
+        </div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="ai-core">
+          <span>AI</span>
+          <small>INTELLIGENCE</small>
+        </div>
+        <div class="float-card card-top">⌘ Python / C</div>
+        <div class="float-card card-bottom">✦ Future Developer</div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">YOUR LEARNING PATH</span>
+        <h2>Everything in <span class="gradient">one place.</span></h2>
+        <p>Study smarter, practise consistently and turn ideas into projects.</p>
+      </div>
+      <div class="grid">
+        <a class="feature-card reveal" href="notes.html">
+          <span class="card-icon">📚</span>
+          <h3>Study Notes</h3>
+          <p>Quick revision resources for programming and AI & DS.</p>
+          <span class="card-link">Explore notes ↗</span>
+        </a>
+        <a class="feature-card reveal" href="coding.html">
+          <span class="card-icon">💻</span>
+          <h3>Coding Zone</h3>
+          <p>Learn C, Python and the fundamentals of programming.</p>
+          <span class="card-link">Start coding ↗</span>
+        </a>
+        <a class="feature-card reveal" href="projects.html">
+          <span class="card-icon">🤖</span>
+          <h3>AI & Projects</h3>
+          <p>Explore machine learning and beginner-friendly ideas.</p>
+          <span class="card-link">Discover projects ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="cta container reveal">
+      <span class="eyebrow">SMALL STEPS. BIG IDEAS.</span>
+      <h2>Your future starts with <span class="gradient">one line of code.</span></h2>
+      <p>Keep learning. Keep experimenting. Keep building.</p>
+      <a class="btn primary" href="coding.html">Start Your Journey →</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="index.html">CODE<span>WITH MT</span></a>
+    <p>Made for learners of AI & Data Science.</p>
+    <p>© <span class="year"></span> Code With MT</p>
+  </footer>
+</body>
+</html>
